@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Conversor de Kilómetros a Otras Unidades
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" id="fondo">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Conversor de Kilómetros a Otras Unidades</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-item>
+      <ion-label position="floating">Kilómetros</ion-label>
+      <ion-input type="number" [(ngModel)]="kilometros"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="convertirUnidades()" id="button">Convertir</ion-button>
+
+    <ion-item class="fila1">
+      <ion-label>Millas:</ion-label>
+      <ion-text>{{ millas }} mi</ion-text>
+    </ion-item>
+
+    <ion-item class="fila2">
+      <ion-label>Yardas:</ion-label>
+      <ion-text>{{ yardas }} yd</ion-text>
+    </ion-item>
+
+    <ion-item class="fila3">
+      <ion-label>Pies:</ion-label>
+      <ion-text>{{ pies }} ft</ion-text>
+    </ion-item>
+
+    <ion-item class="fila4">
+      <ion-label>Pulgadas:</ion-label>
+      <ion-text>{{ pulgadas }} in</ion-text>
+    </ion-item>
+
+    <ion-card content class="textovertical">
+      <p>Cambie la horientación a horizontal para mas conversiones</p>
+    </ion-card>
+
+    <ion-card content class="textohorizontal">
+      <p>Cambie la horientación a vertical para solo convertir a millas</p>
+    </ion-card>
+
+  </div>
+</ion-content>
